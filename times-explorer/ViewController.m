@@ -58,6 +58,7 @@
     if (article[@"multimedia"] && [article[@"multimedia"] count] > 0) {
         NSString *url = [TIMES_BASE_IMAGE_URL stringByAppendingString:article[@"multimedia"][0][@"url"]];
         [cell.articleThumbnail sd_setImageWithURL:[NSURL URLWithString:url]];
+        cell.articleThumbnail.layer.cornerRadius = 4.0f;
     }
     if (article[@"headline"]) {
         cell.articleHeadline.text = article[@"headline"][@"main"];
