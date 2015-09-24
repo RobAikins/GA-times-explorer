@@ -33,6 +33,7 @@
 		D43F2A0B1BB37EA2003D194B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D43F2A181BB4A7F0003D194B /* ArtilceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtilceModel.h; sourceTree = "<group>"; };
 		D43F2A191BB4A7F0003D194B /* ArtilceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtilceModel.m; sourceTree = "<group>"; };
+		D43F2A1B1BB4AB78003D194B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 				D43F2A011BB37EA2003D194B /* ViewController.m */,
 				D43F2A181BB4A7F0003D194B /* ArtilceModel.h */,
 				D43F2A191BB4A7F0003D194B /* ArtilceModel.m */,
+				D43F2A1B1BB4AB78003D194B /* Constants.h */,
 				D43F2A031BB37EA2003D194B /* Main.storyboard */,
 				D43F2A061BB37EA2003D194B /* Assets.xcassets */,
 				D43F2A081BB37EA2003D194B /* LaunchScreen.storyboard */,
