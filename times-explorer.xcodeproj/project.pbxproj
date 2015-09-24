@@ -14,6 +14,7 @@
 		D43F2A051BB37EA2003D194B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43F2A031BB37EA2003D194B /* Main.storyboard */; };
 		D43F2A071BB37EA2003D194B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43F2A061BB37EA2003D194B /* Assets.xcassets */; };
 		D43F2A0A1BB37EA2003D194B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43F2A081BB37EA2003D194B /* LaunchScreen.storyboard */; };
+		D43F2A1A1BB4A7F0003D194B /* ArtilceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D43F2A191BB4A7F0003D194B /* ArtilceModel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		D43F2A061BB37EA2003D194B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D43F2A091BB37EA2003D194B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D43F2A0B1BB37EA2003D194B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D43F2A181BB4A7F0003D194B /* ArtilceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtilceModel.h; sourceTree = "<group>"; };
+		D43F2A191BB4A7F0003D194B /* ArtilceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtilceModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				D43F29FE1BB37EA2003D194B /* AppDelegate.m */,
 				D43F2A001BB37EA2003D194B /* ViewController.h */,
 				D43F2A011BB37EA2003D194B /* ViewController.m */,
+				D43F2A181BB4A7F0003D194B /* ArtilceModel.h */,
+				D43F2A191BB4A7F0003D194B /* ArtilceModel.m */,
 				D43F2A031BB37EA2003D194B /* Main.storyboard */,
 				D43F2A061BB37EA2003D194B /* Assets.xcassets */,
 				D43F2A081BB37EA2003D194B /* LaunchScreen.storyboard */,
@@ -210,6 +215,7 @@
 			files = (
 				D43F2A021BB37EA2003D194B /* ViewController.m in Sources */,
 				D43F29FF1BB37EA2003D194B /* AppDelegate.m in Sources */,
+				D43F2A1A1BB4A7F0003D194B /* ArtilceModel.m in Sources */,
 				D43F29FC1BB37EA2003D194B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

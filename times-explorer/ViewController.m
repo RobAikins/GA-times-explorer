@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "ArtilceModel.h"
 
 @interface ViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (strong, nonatomic) NSArray *articles;
+@property (strong, nonatomic) NSTimer *articleSearchTimer;
 
 @end
 
@@ -19,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupDelegates];
+    self.articles = @[];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -29,7 +33,20 @@
 }
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    [self restartSearchTimer];
     return YES;
+}
+
+- (void) restartSearchTimer {
+    [self.articleSearchTimer invalidate];
+    self.articleSearchTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(searchForArticles) userInfo:NULL repeats:NO];
+}
+
+- (void) searchForArticles {
+    [ArtilceModel articlesForSearch:self.searchTextField.text withCompletion:^(NSArray *articles) {
+        self.articles = articles;
+        [self.myTableView reloadData];
+    }];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -41,7 +58,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.articles.count;
 }
 
 
