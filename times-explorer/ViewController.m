@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "ArtilceModel.h"
+#import "ArticleTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "Constants.h"
 
 @interface ViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
@@ -50,7 +53,19 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return NULL;
+    ArticleTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"Article Cell"];
+    NSDictionary *article = self.articles[indexPath.row];
+    if (article[@"multimedia"] && [article[@"multimedia"] count] > 0) {
+        NSString *url = [TIMES_BASE_IMAGE_URL stringByAppendingString:article[@"multimedia"][0][@"url"]];
+        [cell.articleThumbnail sd_setImageWithURL:[NSURL URLWithString:url]];
+    }
+    if (article[@"headline"]) {
+        cell.articleHeadline.text = article[@"headline"][@"main"];
+    }
+    if (article[@"snippet"]) {
+        cell.articleCaption.text = article[@"snippet"];
+    }
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
