@@ -14,7 +14,7 @@
 
 + (void) articlesForSearch:(NSString *) searchText withCompletion:(void (^)(NSArray *articles)) completion {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSString *url = [NSString stringWithFormat:@"%@?q=%@&api-key=%@", BASE_TIMES_URL, searchText, TIME_API_KEY];
+    NSString *url = [NSString stringWithFormat:@"%@?q=%@&api-key=%@", BASE_TIMES_URL, [searchText stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]], TIME_API_KEY];
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         completion(responseObject[@"response"][@"docs"]);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
