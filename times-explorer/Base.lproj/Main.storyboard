@@ -46,6 +46,10 @@
                             <constraint firstItem="amw-A4-BSo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="pfp-bV-tbX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myTableView" destination="Pqm-f2-nwa" id="3Xf-Je-NvA"/>
+                        <outlet property="searchTextField" destination="pL2-aw-gKb" id="YFu-fJ-W1Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
